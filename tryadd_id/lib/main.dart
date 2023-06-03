@@ -4,7 +4,12 @@ void main() => runApp(MaterialApp(
       home: TryAdd(),
     ));
 
-class TryAdd extends StatelessWidget {
+class TryAdd extends StatefulWidget {
+  @override
+  State<TryAdd> createState() => _TryAddState();
+}
+
+class _TryAddState extends State<TryAdd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,6 +89,14 @@ class TryAdd extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 80),
+            const Center(
+              child: Icon(
+                Icons.favorite_border,
+                size: 30.0,
+                color: Colors.redAccent,
+              ),
             ),
           ],
         ),
